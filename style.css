@@ -1,0 +1,304 @@
+/* === RESET E VARIÁVEIS GLOBAIS === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Paleta de Cores */
+:root {
+  --black: #000000;
+  --gray-950: #0a0a0a;
+  --gray-800: #1f1f1f;
+  --gray-700: #2f2f2f;
+  --gray-400: #9ca3af;
+  --emerald-400: #34d399;
+  --emerald-500: #10b981;
+}
+
+/* Containers padrão */
+section {
+  padding: 5rem 1.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.max-w-3xl {
+  max-width: 768px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.max-w-4xl {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.max-w-6xl {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === TIPOGRAFIA === */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.75rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--gray-400);
+}
+
+/* === BOTÕES === */
+a.button, button {
+  background-color: var(--emerald-500);
+  color: #000;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.button:hover, button:hover {
+  background-color: #059669;
+}
+
+/* === ANIMAÇÃO DE PULSE (ex: escassez visual) === */
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* === RESPONSIVIDADE === */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  section {
+    padding: 3rem 1rem;
+  }
+}
+
+/* === BOX DE OFERTA / PREÇO === */
+.oferta-box {
+  background-color: var(--gray-900);
+  border: 1px solid var(--emerald-500);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.15);
+  margin-top: 2rem;
+}
+
+.oferta-box .preco-antigo {
+  text-decoration: line-through;
+  color: var(--gray-400);
+  font-size: 1.2rem;
+}
+
+.oferta-box .preco-atual {
+  font-size: 2.5rem;
+  color: var(--emerald-400);
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.oferta-box .garantia {
+  font-size: 0.8rem;
+  color: var(--gray-400);
+  margin-top: 1rem;
+}
+
+/* === TABELA COMPARATIVA === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+}
+
+thead {
+  background-color: #000;
+  color: var(--gray-400);
+  border-bottom: 2px solid var(--gray-700);
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--gray-800);
+  transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+  background-color: var(--gray-900);
+}
+
+tbody tr:last-child {
+  background-color: rgba(16, 185, 129, 0.08);
+  color: var(--emerald-400);
+  font-weight: bold;
+  border-bottom: 2px solid var(--emerald-500);
+}
+
+/* === CARDS DE DEPOIMENTO === */
+.card-depoimento {
+  background-color: var(--gray-950);
+  padding: 1.5rem;
+  border: 1px solid var(--gray-800);
+  border-radius: 1rem;
+  transition: transform 0.3s;
+}
+
+.card-depoimento:hover {
+  transform: translateY(-5px);
+}
+
+/* === SELO DE GARANTIA === */
+.garantia {
+  width: 96px;
+  height: auto;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+/* === ESCASSEZ VISUAL (contador falso) === */
+.alerta-escassez {
+  font-size: 1rem;
+  color: var(--emerald-400);
+  font-weight: 600;
+  margin-top: 2rem;
+  animation: pulse 2s infinite;
+}
+
+/* === MOCKUP DE PRODUTO === */
+.mockup-img {
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto;
+  display: block;
+  border-radius: 1rem;
+  box-shadow: 0 0 40px rgba(52, 211, 153, 0.15);
+}
+
+/* === PRINTS DE PROVAS SOCIAIS === */
+.prova-img {
+  border: 1px solid var(--gray-800);
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: 1rem 0;
+  box-shadow: 0 0 15px rgba(255,255,255,0.05);
+}
+
+/* === FAQ === */
+.faq h3 {
+  color: var(--emerald-400);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.faq p {
+  color: var(--gray-400);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* === BOTÃO FLUTUANTE DE ESCASSEZ === */
+.botao-flutuante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--emerald-500);
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+  animation: pulse 2.5s infinite;
+  z-index: 999;
+  font-size: 0.95rem;
+}
+
+.botao-flutuante:hover {
+  background-color: #059669;
+}
+
+/* === RESPONSIVIDADE ADICIONAL === */
+@media (max-width: 640px) {
+  .oferta-box {
+    padding: 1.5rem;
+  }
+
+  .preco-atual {
+    font-size: 2rem;
+  }
+
+  .alerta-escassez {
+    font-size: 0.9rem;
+  }
+
+  .faq h3 {
+    font-size: 1rem;
+  }
+
+  .faq p {
+    font-size: 0.9rem;
+  }
+}
